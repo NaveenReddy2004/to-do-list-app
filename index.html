@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To-Do App</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimpleShop</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>To-Do List</h1>
-    <div class="input-group">
-      <input type="text" id="taskInput" placeholder="Enter a task"/>
-      <button onclick="addTask()">Add</button>
+  <header>
+    <nav>
+      <a href="#catalog">Catalog</a>
+      <a href="#cart">Cart</a>
+      <a href="#checkout">Checkout</a>
+    </nav>
+  </header>
+
+  <section id="catalog">
+    <h1>Products</h1>
+    <div class="product-list">
+      <div class="product">
+        <h2>Product 1</h2>
+        <p class="price">$10.00</p>
+        <button class="add-to-cart" data-product="Product 1" data-price="10.00">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h2>Product 2</h2>
+        <p class="price">$15.00</p>
+        <button class="add-to-cart" data-product="Product 2" data-price="15.00">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h2>Product 3</h2>
+        <p class="price">$20.00</p>
+        <button class="add-to-cart" data-product="Product 3" data-price="20.00">Add to Cart</button>
+      </div>
     </div>
-    <ul id="taskList"></ul>
-  </div>
+  </section>
+
+  <section id="cart">
+    <h1>Shopping Cart</h1>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+  </section>
+
+  <section id="checkout">
+    <h1>Checkout</h1>
+    <form id="checkout-form">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="text" id="address" placeholder="Address" required>
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 SimpleShop. All rights reserved.</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
